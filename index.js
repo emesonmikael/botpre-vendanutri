@@ -162,7 +162,7 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(chatId, "Bem-vindo ao Bot da Crowdsale! Use /help para ver os comandos disponíveis.");
 });
 
-bot.onText(/\/help/, (msg) => {
+bot.onText(/\/helpHxnt/, (msg) => {
     const chatId = msg.chat.id;
     const helpMessage = `
 📋 *Comandos Disponíveis:*
@@ -174,11 +174,11 @@ bot.onText(/\/help/, (msg) => {
     bot.sendMessage(chatId, helpMessage, { parse_mode: 'Markdown' });
 });
 
-bot.onText(/\/guide/, (msg) => {
+bot.onText(/\/guideHxnt/, (msg) => {
     sendPurchaseGuide();
 });
 
-bot.onText(/\/status/, async (msg) => {
+bot.onText(/\/statusHxnt/, async (msg) => {
     const chatId = msg.chat.id;
     try {
         const tokenContract = await getTokenContract();
