@@ -157,7 +157,7 @@ const sendPurchaseGuide = () => {
 };
 
 // Configuração dos comandos do bot
-bot.onText(/\/start/, (msg) => {
+bot.onText(/\/startHxnt/, (msg) => {
     const chatId = msg.chat.id;
     bot.sendMessage(chatId, "Bem-vindo ao Bot da Crowdsale! Use /help para ver os comandos disponíveis.");
 });
@@ -166,10 +166,10 @@ bot.onText(/\/helpHxnt/, (msg) => {
     const chatId = msg.chat.id;
     const helpMessage = `
 📋 *Comandos Disponíveis:*
-/start - Iniciar interação com o bot
-/help - Mostrar esta mensagem de ajuda
-/guide - Receber orientações de como comprar tokens
-/status - Verificar o status atual da crowdsale
+/startHxnt - Iniciar interação com o bot
+/helpHxnt - Mostrar esta mensagem de ajuda
+/guideHxnt - Receber orientações de como comprar tokens
+/statusHxnt - Verificar o status atual da crowdsale
     `;
     bot.sendMessage(chatId, helpMessage, { parse_mode: 'Markdown' });
 });
@@ -192,7 +192,7 @@ bot.onText(/\/statusHxnt/, async (msg) => {
         const formattedWeiRaised = ethers.utils.formatEther(weiRaised);
         const formattedRate = ethers.utils.formatEther(rate);
         const message = `
-📊 *Status da Pre-Venda:*
+📊 *Status da Pre-Venda Hxnt:*
 
 🏦 *Tokens restantes* ${formattedRemaining} ${symbol}
 💰 *BNB Arrecadados:* ${formattedWeiRaised} BNB
