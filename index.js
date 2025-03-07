@@ -194,9 +194,9 @@ bot.onText(/\/statusHxnt/, async (msg) => {
         const message = `
 📊 *Status da Pre-Venda Hxnt:*
 
-🏦 *Tokens restantes* ${formattedRemaining} ${symbol}
+🏦 *Nfts restantes* ${formattedRemaining} ${symbol}
 💰 *BNB Arrecadados:* ${formattedWeiRaised} BNB
-🔢 *Taxa de Conversão:* ${formattedRate} tokens por BNB
+🔢 *Taxa de Conversão:* ${formattedRate} Nfts por BNB
 🔄 *Símbolo do Token:* ${symbol}
         `;
         bot.sendMessage(chatId, message, { parse_mode: 'Markdown' });
